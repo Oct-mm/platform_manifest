@@ -26,6 +26,11 @@
            fetch="git://github.com/TheMuppets/"
            sync-c="true"
            sync-j="4" />
+           
+  <remote  name="oct"
+           fetch="git://github.com/Oct-mm/"
+           sync-c="true"
+           sync-j="4" />         
 
   <remote  name="to"
            fetch="https://github.com/Team-OctOS/"
@@ -45,7 +50,7 @@
     <copyfile src="core/root.mk" dest="Makefile" />
   </project>
 
-  <project path="manifest" name="platform_manifest" remote="to" revision="oct-mm" />
+  <project path="manifest" name="platform_manifest" remote="oct" revision="oct-mm" />
   <project path="frameworks/base" name="platform_frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="to" revision="oct-mm" />
   <project path="frameworks/opt/telephony" name="platform_frameworks_opt_telephony" groups="pdk" remote="to" revision="oct-mm" />
   <project path="frameworks/support" name="platform_frameworks_support" groups="pdk-cw-fs,pdk-fs" remote="to" revision="oct-mm" />
@@ -56,9 +61,10 @@
   <project path="packages/apps/Settings" name="platform_packages_apps_settings" groups="pdk-fs" remote="to" revision="oct-mm" />
   <project path="packages/wallpapers/BlueBalls" name="platform_packages_wallpapers_BlueBalls" remote="to" revision="oct-mm" />
   <project path="prebuilts/misc" name="platform_prebuilts_misc" groups="pdk" remote="to" revision="oct-mm" />
-  <project path="vendor/to" name="platform_vendor_to" remote="to" revision="oct-mm" />
+  <project path="vendor/to" name="platform_vendor_to" remote="oct" revision="oct-mm" />
   <project path="vendor/cm/sepolicy/qcom" name="platform_vendor_cm_sepolicy_qcom" remote="to" revision="oct-mm" />
   <project path="vendor/cmsdk" name="cm_platform_sdk" remote="to" revision="oct-mm" />
+  <project path="jet" name="platform_jet" remote="oct" revision="oct-mm" />
 
 <!-- END OCTOS -->
 
