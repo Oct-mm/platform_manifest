@@ -4,7 +4,7 @@
   <remote  name="aosp"
            fetch="https://android.googlesource.com"
            review="android-review.googlesource.com"
-           revision="refs/tags/android-6.0.1_r22" />
+           revision="refs/tags/android-6.0.1_r24" />
 
   <remote  name="github"
            fetch=".."
@@ -53,6 +53,7 @@
   <project path="manifest" name="platform_manifest" remote="oct" revision="oct-mm" />
   <project path="frameworks/base" name="platform_frameworks_base" groups="pdk-cw-fs,pdk-fs" remote="to" revision="oct-mm" />
   <project path="frameworks/opt/telephony" name="platform_frameworks_opt_telephony" groups="pdk" remote="to" revision="oct-mm" />
+  <project path="frameworks/support" name="platform_frameworks_support" groups="pdk-cw-fs,pdk-fs" remote="to" revision="oct-mm" />
   <project path="packages/apps/AboutOctOs" name="platform_packages_apps_AboutOctOs" remote="to" revision="oct-mm" />
   <project path="packages/apps/FileManager" name="platform_packages_apps_FileManager" remote="to" revision="oct-mm" />
   <project path="packages/apps/KernelAdiutor" name="platform_packages_apps_KernelAdiutor" remote="to" revision="oct-mm" />
@@ -216,7 +217,6 @@
   <project path="frameworks/opt/timezonepicker" name="CyanogenMod/android_frameworks_opt_timezonepicker" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/opt/vcard" name="CyanogenMod/android_frameworks_opt_vcard" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/rs" name="CyanogenMod/android_frameworks_rs" groups="pdk" />
-  <project path="frameworks/support" name="CyanogenMod/android_frameworks_support" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/volley" name="CyanogenMod/android_frameworks_volley" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/webview" name="CyanogenMod/android_frameworks_webview" groups="pdk-cw-fs,pdk-fs" />
   <project path="frameworks/wilhelm" name="CyanogenMod/android_frameworks_wilhelm" groups="pdk-cw-fs,pdk-fs" />
@@ -319,9 +319,11 @@
   <project path="packages/providers/ThemesProvider" name="CyanogenMod/android_packages_providers_ThemesProvider" />
   <project path="packages/providers/TvProvider" name="CyanogenMod/android_packages_providers_TvProvider" groups="pdk-fs" />
   <project path="packages/providers/UserDictionaryProvider" name="CyanogenMod/android_packages_providers_UserDictionaryProvider" groups="pdk-cw-fs,pdk-fs" />
+  <project path="packages/providers/WeatherProvider" name="CyanogenMod/android_packages_providers_WeatherProvider" />
   <project path="packages/screensavers/Basic" name="CyanogenMod/android_packages_screensavers_Basic" groups="pdk-fs" />
   <project path="packages/screensavers/PhotoTable" name="CyanogenMod/android_packages_screensavers_PhotoTable" groups="pdk-fs" />
   <project path="packages/screensavers/WebView" name="CyanogenMod/android_packages_screensavers_WebView" groups="pdk-fs" />
+  <project path="packages/services/LiveLockScreenService" name="CyanogenMod/android_packages_services_LiveLockScreenService" groups="pdk-cw-fs,pdk-fs" />
   <project path="packages/services/Mms" name="CyanogenMod/android_packages_services_Mms" groups="pdk-cw-fs,pdk-fs" />
   <project path="packages/services/Telecomm" name="CyanogenMod/android_packages_services_Telecomm" groups="pdk-cw-fs,pdk-fs" />
   <project path="packages/services/Telephony" name="CyanogenMod/android_packages_services_Telephony" groups="pdk-cw-fs,pdk-fs" />
@@ -379,7 +381,7 @@
   <project path="external/crcalc" name="platform/external/crcalc" groups="pdk-fs" remote="aosp" />
   <project path="external/deqp" name="platform/external/deqp" groups="pdk-fs" remote="aosp" />
   <project path="external/dexmaker" name="platform/external/dexmaker" groups="pdk-cw-fs,pdk-fs" remote="aosp" />
-  <project path="external/doclava" name="platform/external/doclava" groups="pdk-cw-fs,pdk-fs" remote="aosp" />
+  <project path="external/doclava" name="CyanogenMod/android_external_doclava" groups="pdk-cw-fs,pdk-fs" />
   <project path="external/donuts" name="platform/external/donuts" groups="pdk-fs" remote="aosp" />
   <project path="external/drm_gralloc" name="platform/external/drm_gralloc" groups="drm_gralloc" remote="aosp" />
   <project path="external/drm_hwcomposer" name="platform/external/drm_hwcomposer" groups="drm_hwcomposer" remote="aosp" />
@@ -407,7 +409,7 @@
   <project path="external/google-tv-pairing-protocol" name="platform/external/google-tv-pairing-protocol" groups="pdk-fs" remote="aosp" />
   <project path="external/gptfdisk" name="CyanogenMod/android_external_gptfdisk" groups="pdk-fs" />
   <project path="external/gtest" name="platform/external/gtest" groups="pdk" remote="aosp" />
-  <project path="external/guava" name="platform/external/guava" groups="pdk-cw-fs,pdk-fs" remote="aosp" />
+  <project path="external/guava" name="CyanogenMod/android_external_guava" groups="pdk-cw-fs,pdk-fs" />
   <project path="external/hamcrest" name="platform/external/hamcrest" groups="pdk-cw-fs,pdk-fs" remote="aosp" />
   <project path="external/harfbuzz_ng" name="platform/external/harfbuzz_ng" groups="pdk,qcom_msm8x26" remote="aosp" />
   <project path="external/hyphenation-patterns" name="platform/external/hyphenation-patterns" groups="pdk-fs" remote="aosp" />
@@ -508,7 +510,7 @@
   <project path="external/valgrind" name="platform/external/valgrind" groups="pdk" remote="aosp" />
   <project path="external/vboot_reference" name="platform/external/vboot_reference" groups="vboot" remote="aosp" />
   <project path="external/vixl" name="platform/external/vixl" groups="pdk" remote="aosp" />
-  <project path="external/vogar" name="platform/external/vogar" groups="pdk" remote="aosp" />
+  <project path="external/vogar" name="CyanogenMod/android_external_vogar" groups="pdk" />
   <project path="external/webp" name="platform/external/webp" groups="pdk,qcom_msm8x26" remote="aosp" />
   <project path="external/webrtc" name="platform/external/webrtc" groups="pdk" remote="aosp" />
   <project path="external/xmlwriter" name="platform/external/xmlwriter" groups="pdk-cw-fs,pdk-fs" remote="aosp" />
